@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Greet} from "./components/Greet";
+import {Status} from "./components/Status";
+import {Heading} from "./components/Heading";
+import {HeadingWrapper} from "./components/HeadingWrapper";
+import {Footer} from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeadingWrapper>
+        <Heading>Placeholder text</Heading>
+      </HeadingWrapper>
+    <Greet text={'Hello World!'} messageCounter={10}  />
+    <Status status={'error'}/>
+        <Footer copyright={'test'}/>
     </div>
   );
 }
